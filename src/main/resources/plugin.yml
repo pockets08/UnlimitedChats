@@ -1,0 +1,16 @@
+name: UnlimitedChats
+main: tsp.unlimitedchats.UnlimitedChats
+version: 1.0
+authors: [Silent]
+softdepend: [PlaceholderAPI]
+
+commands:
+  unlimitedchats:
+    usage: /unlimitedchats [reload]
+    description: Plugin Information & Reloading
+    aliases: [uc]
+
+permissions:
+  uc.admin:
+    default: op
+    description: Access to reload the plugin

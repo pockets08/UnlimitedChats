@@ -1,0 +1,49 @@
+# UnlimitedChats by Silent
+# PlaceholderAPI supported!
+
+# Message sent when player does not have permission to send a message in the chat
+# $chat - The chat id
+noPermission: '&cYou do not have permission for the &4$chat &cchat.'
+
+# Chats List
+#
+# Plugin Variables:
+# $sender - The person sending a message to the chat
+# $message - The message
+#
+# For more placeholders use PlaceholderAPI!
+#
+# >> Notice: Please make sure 'commands' and 'prefix' do not overlap between chats! <<
+#
+chats:
+  # Channel Identifier
+  staff:
+    # Permission needed to use the chat
+    permission: 'uc.staffchat'
+    # Commands for the chat
+    # /<command> <message>
+    commands: ['staffchat', 'sc']
+    # Chat prefix (add this infront of message send message in the chat)
+    prefix: 's@'
+    # Chat Format
+    format: '&7(&bStaff Chat&7) &6$sender: &b$message'
+  helper:
+    permission: 'uc.helperchat'
+    commands: ['helperchat', 'hc']
+    prefix: 'h@'
+    format: '&7(&eHelper Chat&7) &6$sender: &e$message'
+  builder:
+    permission: 'uc.builderchat'
+    commands: ['builderchat', 'blc']
+    prefix: 'b@'
+    format: '&7(&2Builder Chat&7) &6$sender: &2$message'
+  moderator:
+    permission: 'uc.modchat'
+    commands: ['modchat', 'mc']
+    prefix: 'm@'
+    format: '&7(&5Moderator Chat&7) &6$sender: &5$message'
+  admin:
+    permission: 'uc.adminchat'
+    commands: ['adminchat', 'ao']
+    prefix: '@'
+    format: '&7(&4&lADMIN ONLY&7) &6$sender: &c$message'
