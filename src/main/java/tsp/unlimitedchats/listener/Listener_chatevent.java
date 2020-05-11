@@ -14,6 +14,9 @@ public class Listener_chatevent implements Listener {
     public void chat(AsyncPlayerChatEvent e) {
         for (String chat : FileUtils.config.getConfigurationSection("chats").getKeys(false)) {
             if (e.getMessage().startsWith(FileUtils.getString("chats." + chat + ".prefix"))) {
+                if (FileUtils.getString("chats." + chat + ".prefix").isEmpty()) {
+                    return;
+                }
                 if (e.getPlayer().hasPermission(FileUtils.getString("chats." + chat + ".permission"))) {
                     String msg = Utils.getMessage(e.getMessage().split(" "));
                     for (Player player : Bukkit.getOnlinePlayers()) {
