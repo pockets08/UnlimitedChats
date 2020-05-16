@@ -1,6 +1,6 @@
 name: UnlimitedChats
 main: tsp.unlimitedchats.UnlimitedChats
-version: 1.1
+version: 1.2
 authors: [Silent]
 softdepend: [PlaceholderAPI]
 

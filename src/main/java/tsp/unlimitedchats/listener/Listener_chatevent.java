@@ -22,11 +22,13 @@ public class Listener_chatevent implements Listener {
                     for (Player player : Bukkit.getOnlinePlayers()) {
                         if (player.hasPermission(FileUtils.getString("chats." + chat + ".permission"))) {
                             Utils.sendMessage(player, FileUtils.getString("chats." + chat + ".format")
-                                    .replace("$message", msg));
+                                    .replace("$message", msg)
+                                    .replace("$sender", e.getPlayer().getName()));
                         }
                     }
                     Bukkit.getConsoleSender().sendMessage(Utils.translate(e.getPlayer(), FileUtils.getString("chats." + chat + ".format")
-                            .replace("$message", msg)));
+                            .replace("$message", msg)
+                            .replace("$sender", e.getPlayer().getName())));
                     e.setCancelled(true);
                     break;
                 }

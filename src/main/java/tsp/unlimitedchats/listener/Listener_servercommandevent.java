@@ -19,11 +19,13 @@ public class Listener_servercommandevent implements Listener {
                     for (Player player : Bukkit.getOnlinePlayers()) {
                         if (player.hasPermission(FileUtils.getString("chats." + chat + ".permission"))) {
                             Utils.sendMessage(player, FileUtils.getString("chats." + chat + ".format")
-                                    .replace("$message", msg));
+                                    .replace("$message", msg)
+                                    .replace("$sender", e.getSender().getName()));
                         }
                     }
                     Bukkit.getConsoleSender().sendMessage(Utils.translate(e.getSender(), FileUtils.getString("chats." + chat + ".format")
-                            .replace("$message", msg)));
+                            .replace("$message", msg)
+                            .replace("$sender", e.getSender().getName())));
                     e.setCancelled(true);
                     break;
                 }

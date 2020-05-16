@@ -26,7 +26,6 @@ public class Utils {
                 message = PlaceholderAPI.setPlaceholders((Player) sender, message);
             }
         }
-        message = message.replace("$sender", sender.getName());
         return colorize(message);
     }
 
